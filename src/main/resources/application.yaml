@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: AuthorizationService
+
+  datasource:
+    password: wefw
+    username:
+
+#//написать сущность User'a, репу, сервис, класс токен с айди/токеном и реализовать связь юзера с сущностью токен OneToMany,
+#  контроллер AuthController - регистрация и контроллер в котором можно авторизироваться, и метод refreshToken
+
+application:
+  security:
+    jwt:
+      secret-key: 456456456256254kKFHIFUHIGILJHFONrnNr89BKJBKJNB
+      expiration: 86400000
+      refresh-token:
+        expiration: 604800000
+
+logging:
+  level:
+    root: info
+    ru.anoshindanil.authorizationservice.config: DEBUG
+  file:
+    name: logs/application.log
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+      max-history: 15
